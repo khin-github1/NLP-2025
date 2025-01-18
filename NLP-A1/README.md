@@ -16,7 +16,7 @@ python app/app.py
 Enter Input a single word on a search bar  and display the top 10 most similar words from each model's vocabulary.
 
 ## Training Data
-Corpus source - nltk datasets('abc') : Austrailian Broadcasting Commission  
+Corpus source - nltk datasets('reuters')
 Token Count |C| - 241109  
 Vocabulary Size |V| - 14270
 Embedding dimension - 2  

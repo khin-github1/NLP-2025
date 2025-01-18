@@ -11,7 +11,7 @@ To run app,
 ```sh
 python app/app.py
 ```
-3. Access the app with http://127.0.0.1:5000  (but the app has not finished yet)
+3. Access the app with http://127.0.0.1:5000 
 ## Usage
 Enter Input a single word on a search bar  and display the top 10 most similar words from each model's vocabulary.
 

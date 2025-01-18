@@ -1,0 +1,190 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Word Similarity Search</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            background-color: #f4f4f9;
+            color: #333;
+        }
+        h1 {
+            text-align: center;
+            color: #4CAF50;
+        }
+        form {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        input[type="text"] {
+            padding: 10px;
+            width: 300px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        button {
+            padding: 10px 20px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+        h2 {
+            color: #4CAF50;
+            margin-top: 20px;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 20px;
+        }
+        table, th, td {
+            border: 1px solid #ddd;
+        }
+        th, td {
+            padding: 12px;
+            text-align: left;
+        }
+        th {
+            background-color: #4CAF50;
+            color: white;
+        }
+        tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+        tr:hover {
+            background-color: #ddd;
+        }
+        .footer {
+            text-align: center;
+            margin-top: 40px;
+            font-size: 14px;
+            color: #777;
+        }
+        .results-container {
+            display: flex;
+            gap: 20px; /* Space between tables */
+        }
+        .results-container > div {
+            flex: 1; /* Each table container takes equal width */
+        }
+        .error-message {
+            color: red;
+            font-size: 14px;
+            margin-top: 10px;
+            display: none; /* Hidden by default */
+        }
+    </style>
+</head>
+<body>
+    <h1>Word Similarity Search</h1>
+    <form method="post" onsubmit="return validateInput()">
+        <input type="text" name="search_query" id="search_query" placeholder="Enter a single word" required>
+        <button type="submit">Search</button>
+        <div id="error-message" class="error-message">Please enter only one word.</div>
+    </form>
+    
+    {% if search_query %}
+        <h2>Search Results for: {{ search_query }}</h2>
+
+        <div class="results-container">
+            <!-- Glove Results -->
+            <div>
+                <h3>Glove Results:</h3>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Rank</th>
+                            <th>Word</th>
+                            <th>Similarity Score</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% for result in glove_output %}
+                            <tr>
+                                <td>{{ loop.index }}</td>
+                                <td>{{ result.split('. ')[1].split(' (')[0] }}</td>
+                                <td>{{ result.split('(')[1].split(')')[0] }}</td>
+                            </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+
+            <!-- Skipgram Results -->
+            <div>
+                <h3>Skipgram Results:</h3>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Rank</th>
+                            <th>Word</th>
+                            <th>Similarity Score</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% for result in skipgram_output %}
+                            <tr>
+                                <td>{{ loop.index }}</td>
+                                <td>{{ result.split('. ')[1].split(' (')[0] }}</td>
+                                <td>{{ result.split('(')[1].split(')')[0] }}</td>
+                            </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+
+            <!-- Skipgram with Negative Sampling Results -->
+            <div>
+                <h3>Skipgram with Negative Sampling Results:</h3>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Rank</th>
+                            <th>Word</th>
+                            <th>Similarity Score</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% for result in skipgram_neg_output %}
+                            <tr>
+                                <td>{{ loop.index }}</td>
+                                <td>{{ result.split('. ')[1].split(' (')[0] }}</td>
+                                <td>{{ result.split('(')[1].split(')')[0] }}</td>
+                            </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    {% endif %}
+
+    <div class="footer">
+        <p>Created by: Khin Yadanar Hlaing</p>
+        <p>ID: St124959</p>
+    </div>
+
+    <script>
+        function validateInput() {
+            const input = document.getElementById('search_query').value.trim();
+            const errorMessage = document.getElementById('error-message');
+
+            // Check if the input contains more than one word
+            if (input.split(' ').length > 1) {
+                errorMessage.style.display = 'block'; // Show error message
+                return false; // Prevent form submission
+            } else {
+                errorMessage.style.display = 'none'; // Hide error message
+                return true; // Allow form submission
+            }
+        }
+    </script>
+</body>
+</html>

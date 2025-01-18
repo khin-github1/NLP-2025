@@ -25,7 +25,7 @@ Epochs - 1000
 
 Training parameters are consistant across all three models.  
 
-## Word Embedding Models Comparison
+## Model Comparison
 
 | Model             | Window Size | Training Loss | Training Time | Syntactic Accuracy | Semantic Accuracy |
 |-------------------|-------------|---------------|---------------|--------------------|-------------------|

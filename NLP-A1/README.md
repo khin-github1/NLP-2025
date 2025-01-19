@@ -13,9 +13,8 @@ python app.py
 ```
 3. Access the app with http://127.0.0.1:5000 
 
-*** When you run python app.py,Download glove.6B.100d.txt from the GloVe website, run python app.py, and follow the instructions to place the file in the specified directory. b/c file size of glove.6B.100d.txt is large. ***
+**When you run python app.py,Download glove.6B.100d.txt from the GloVe website, run python app.py, and follow the instructions to place the file in the specified directory. b/c file size of glove.6B.100d.txt is large.**
 
-*** 
 ## Usage
 Enter a single word on a search bar and display the top 10 most similar words from each model's vocabulary.
 

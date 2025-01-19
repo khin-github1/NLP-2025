@@ -1,11 +1,19 @@
 # NLP_A1_That’s What I LIKE
+- [Student Information](#student-information)
+- [Installation and Setup](#installation-steps)
+- [Usage](#usage)
+- [Training Data](#training-data)
+- [Word Embedding Models Comparison](#model-comparison)
+- [Similarity Scores](#similarity-scores)
+- [Model Comparison Report](#model-comparison-report)
+- [Result Images](#result-images)
 
 ## Student Information
 **Name** - Khin Yadanar Hlaing 
 
 **ID** - st124959
 
-
+## Installation Steps
 To run app, 
 1. Load the files from this repository
 2. Run
@@ -47,6 +55,8 @@ Training parameters are consistant across all three models.
 
 ## Model Comparison Report
 This report evaluates the performance of four word embedding models: Skipgram, Skipgram with Negative Sampling (NEG), GloVe, and GloVe (Gensim). The training loss for Skipgram, Skipgram (NEG), and GloVe has improved due to enhancements in the calculation functions. While the training times for both Skipgram models are similar, GloVe is notably faster. However, the semantic and syntactic accuracy of all three models trained from scratch is 0%, likely due to limitations in the corpus size. In similarity tests, the pretrained GloVe (Gensim) model performs close to human-level judgment, with a Spearman correlation of 0.6035, significantly outperforming the other models. This highlights the importance of pretraining and larger datasets for achieving higher accuracy and similarity performance. Overall, GloVe (Gensim) stands out as the most effective model, while the from-scratch models require further optimization or larger datasets to improve their results.
+
+## Result Images 
 
 ![Word Similarity Search for "provinces" ](images/provinces.png) Fig1
 

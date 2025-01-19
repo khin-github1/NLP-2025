@@ -1,1 +1,5 @@
+# Ignore compiled Python files
 __pycache__/
+
+# Ignore the GloVe model files (relative and parent directory paths)
+

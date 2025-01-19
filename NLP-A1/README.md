@@ -1,8 +1,9 @@
 # NLP_A1_That’s What I LIKE
 
 ## Student Information
-Name - Khin Yadanar Hlaing 
-ID - st124959
+**Name** - Khin Yadanar Hlaing 
+
+**ID** - st124959
 
 
 To run app, 

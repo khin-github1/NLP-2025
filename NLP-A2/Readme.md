@@ -97,7 +97,8 @@ python app.py
 ```
  -Access the app with http://127.0.0.1:5000 
 ## Results
-[Download the Video](NLP-A2/video-language-model.mp4)
+
+![Cinderella ](images/cinderella.png)
 
 [Watch the Video](https://drive.google.com/drive/folders/1hyTL6PCqPajuEvy2jQVdmUuKsA1iFP6f)
 

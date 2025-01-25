@@ -88,14 +88,14 @@ The trained model can generate text based on a given prompt. The process involve
 2. **Run the Notebook:** Open the `LSTM-LM-fairytale.ipynb` notebook and run the cells to preprocess the data, train the model, and generate text.
 3. To run app, 
 
- -Load the files from this repository
+ - Load the files from this repository
 
- -Run
+ - Run
 
 ```sh
 python app.py
 ```
- -Access the app with http://127.0.0.1:5000 
+ - Access the app with http://127.0.0.1:5000 
 ## Results
 
 ![Cinderella ](images/cinderella.png)

@@ -17,12 +17,13 @@ This project implements an LSTM-based language model to generate fairy tale text
 
 ## Student Information
 **Name:** Khin Yadanar Hlaing 
+
 **ID:** st124959
 
 
 
 ## Dataset
-The dataset used for this assignment is a collection of fairy tales story(indcluding Cinderella, Sleeping Beauty and Beauty and the beat)fetched from [Project Gutenberg](https://www.gutenberg.org/). The text is preprocessed by tokenizing and splitting into sentences. The dataset is then divided into training, validation, and test sets.
+The dataset used for this assignment is a collection of fairy tales stories (indcluding Cinderella, Sleeping Beauty and Beauty and the beat)fetched from [Project Gutenberg](https://www.gutenberg.org/). The text is preprocessed by tokenizing and splitting into sentences. The dataset is then divided into training, validation, and test sets.
 ### Data Fetching
 The dataset is fetched using an HTTP GET request to the following URL:
 ```python
@@ -86,13 +87,19 @@ The trained model can generate text based on a given prompt. The process involve
 1. **Install Dependencies:** Ensure you have the required libraries installed, including `torch`, `torchtext`, `nltk`, and `requests`.
 2. **Run the Notebook:** Open the `LSTM-LM-fairytale.ipynb` notebook and run the cells to preprocess the data, train the model, and generate text.
 3. To run app, 
+
  -Load the files from this repository
+
  -Run
+
 ```sh
 python app.py
 ```
  -Access the app with http://127.0.0.1:5000 
 ## Results
 [Download the Video](NLP-A2/video-language-model.mp4)
+
+[Watch the Video](https://drive.google.com/drive/folders/1hyTL6PCqPajuEvy2jQVdmUuKsA1iFP6f)
+
 
 

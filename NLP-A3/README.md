@@ -38,9 +38,15 @@ English(source language) - tokenized using torch get_tokenizer.
 Burmese/Myanmar (target language) - tokenized using Dr.Ye Kyaw Thu's myWord segmenter (https://github.com/ye-kyaw-thu/myWord)
 
 For tokenization, the English (source) text is processed using PyTorch’s get_tokenizer, while the Burmese (target) text is segmented using Dr. Ye Kyaw Thu's myWord segmenter. Since Burmese lacks meaningful spaces, a regular expression is applied to first break sentences into syllables. These syllables are then grouped into meaningful word units, ensuring proper segmentation.
+
+
 Sentence: still wear dresses when I'm working at home because I feel fancier.
+
+
 Sentence:  အိမ်မှာ အလုပ်လုပ်ရင်လည်း အင်္ကျီလဲဖြစ်တယ် ပိုပြီးတော့ အာရုံလာလို့လေ။
-Tokenization:  ['အိမ်', 'မှာ', 'အလုပ်', 'လုပ်', 'ရင်', 'လည်း', 'အင်္ကျီ', 'လဲ', 'ဖြစ်', 'တယ်', 'ပို', 'ပြီး', 'တော့', 'အာရုံ', 'လာ', 'လို့', 'လေ', '။'
+Tokenization:  ['အိမ်', 'မှာ', 'အလုပ်', 'လုပ်', 'ရင်', 'လည်း', 'အင်္ကျီ', 'လဲ', 'ဖြစ်', 'တယ်', 'ပို', 'ပြီး', 'တော့', 'အာရုံ', 'လာ', 'လို့', 'လေ', '။']
+
+
 Once tokenized, a vocabulary is built by selecting tokens that appear at least twice. The processed corpus is then transformed into tensors, with padding applied using a collation function. This prepares the data for efficient batch loading during model training.
 ## Task 2 - Experiment with Attention Mechanisms
 
@@ -70,7 +76,7 @@ The translation accuracy, however, is lacking for all three mechanisms. Since th
 ## Attention Map
 | General Attention Map                                     | Multiplicative Attention Map                                      | Additive Attention Map                                       |
 |----------------------------------------------|----------------------------------------------|----------------------------------------------|
-| <img src="./images/generalmap.png" width="300"/> | <img src="./images/multimap.png" width="300"/> | <img src="./images/additivemap.png" width="300"/> | 
+| <img src="./images/generalmap.png" width="310"/> | <img src="./images/multimap.png" width="310"/> | <img src="./images/additivemap.png" width="310"/> | 
 
 ## Relation between Burmese and Additive Attention
 The complexity of relationships between the tokens in the Burmese language as well as the cross relations between each Burmese phrase and English word is assumed to be the primary reason behind the slight performance advantage of the additive attention model over the other two models. The extra trainable hyperparameters of the additive attention mechanism allows for these complex relationships to be learned by the model.

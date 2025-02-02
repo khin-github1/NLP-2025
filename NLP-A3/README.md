@@ -76,7 +76,7 @@ The translation accuracy, however, is lacking for all three mechanisms. Since th
 ## Attention Map
 | General Attention Map                                     | Multiplicative Attention Map                                      | Additive Attention Map                                       |
 |----------------------------------------------|----------------------------------------------|----------------------------------------------|
-| <img src="./images/generalmap.png" width="310"/> | <img src="./images/multimap.png" width="310"/> | <img src="./images/additivemap.png" width="310"/> | 
+| <img src="./images/generalmap.png" width="350"/> | <img src="./images/multimap.png" width="350"/> | <img src="./images/additivemap.png" width="350"/> | 
 
 ## Relation between Burmese and Additive Attention
 The complexity of relationships between the tokens in the Burmese language as well as the cross relations between each Burmese phrase and English word is assumed to be the primary reason behind the slight performance advantage of the additive attention model over the other two models. The extra trainable hyperparameters of the additive attention mechanism allows for these complex relationships to be learned by the model.

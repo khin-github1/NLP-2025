@@ -47,30 +47,30 @@ Once tokenized, a vocabulary is built by selecting tokens that appear at least t
 
 | Attentions       | Training Loss | Training PPL | Validation Loss | Validation PPL |
 |------------------|---------------|--------------|-----------------|----------------|
-| General       |        0.787          |       2.196        |      3.316         |        27.559         |
-| Multiplicative|         2.895          |       18.079        |       2.230        |         9.299        |
-| Additive      |        2.821           |      16.797        |       1.739         |          5.693       |
+| General       |        3.488         |       32.706       |      3.829         |        46.007         |
+| Multiplicative|         3.654        |       38.622        |       4.036        |         56.573        |
+| Additive      |        3.648           |      38.379        |       4.053         |          47.583      |
 
 The performance of the additive attention mechanism is slightly better than the performance of the other two mechanisms. The reasoning and implication behind this will be explained in [Relation between Burmese and Additive Attention](#relation-between-burmese-and-additive-attention).
 
 The computational efficiency :  
-General Attention : 2m 57s  
-Multiplicative Attention : 2m 59s  
-Additive Attention : 3m 2s  
-We can conclude that all three models are equal in terms of computational efficiency.
+General Attention : 14m 4s  
+Multiplicative Attention : 7m 11s  
+Additive Attention : 10m 19s  
+
 
 The translation accuracy, however, is lacking for all three mechanisms. Since there is no clear benchmark available for Myanmar language, the additive attention mechanism was chosen based purely on validation loss and perplexity.
 
 ## Loss Graph
 | General Attention Loss                                     | Multiplicative Attention Loss                                      | Additive Attention Loss                                       |
 |----------------------------------------------|----------------------------------------------|----------------------------------------------|
-| <img src="./images/gen_att_loss.png" width="300"/> | <img src="./images/mul_att_loss.png" width="300"/> | <img src="./images/add_att_loss.png" width="300"/> |
+| <img src="./images/general.png" width="300"/> | <img src="./images/Multi.png" width="300"/> | <img src="./images/Additive.png" width="300"/> |
  
 
 ## Attention Map
 | General Attention Map                                     | Multiplicative Attention Map                                      | Additive Attention Map                                       |
 |----------------------------------------------|----------------------------------------------|----------------------------------------------|
-| <img src="./images/gen_att_map.png" width="300"/> | <img src="./images/mul_att_map.png" width="300"/> | <img src="./images/add_att_map.png" width="300"/> | 
+| <img src="./images/generalmap.png" width="300"/> | <img src="./images/multimap.png" width="300"/> | <img src="./images/additivemap.png" width="300"/> | 
 
 ## Relation between Burmese and Additive Attention
 The complexity of relationships between the tokens in the Burmese language as well as the cross relations between each Burmese phrase and English word is assumed to be the primary reason behind the slight performance advantage of the additive attention model over the other two models. The extra trainable hyperparameters of the additive attention mechanism allows for these complex relationships to be learned by the model.

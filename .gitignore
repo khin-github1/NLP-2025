@@ -2,4 +2,6 @@
 __pycache__/
 
 # Ignore the GloVe model files (relative and parent directory paths)
+Dataset
 
+myWord

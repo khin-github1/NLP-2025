@@ -62,16 +62,16 @@ Dropout rate - 0.1
 | Attentions       | Training Loss | Training PPL | Validation Loss | Validation PPL |
 |------------------|---------------|--------------|-----------------|----------------|
 | General       |        3.488         |       32.706       |      3.829         |        46.007         |
-| Multiplicative|         3.654        |       38.622        |       4.036        |         56.573        |
+| Multiplicative|         3.461        |       31.862       |       3.805       |         44.903        |
 | Additive      |        3.648           |      38.379        |       4.053         |          47.583      |
 
 
 The computational efficiency :  
 General Attention : 14m 4s  
-Multiplicative Attention : 7m 11s  
+Multiplicative Attention : 7m 10s  
 Additive Attention : 10m 19s  
 
-Training and validation losses are nearly the same across all attention mechanisms. While General Attention performs slightly better, it is the slowest (14m 4s). Multiplicative Attention is the fastest (7m 11s) but has the highest perplexity. Additive Attention (10m 19s) offers a good balance between performance and efficiency, making it the best choice for Myanmar translation.
+Training and validation losses are nearly the same across all attention mechanisms. While General Attention performs slightly better, it is the slowest (14m 4s). Multiplicative Attention is the fastest (7m 10s) . Additive Attention (10m 19s) offers a good balance between performance and efficiency, making it the best choice for Myanmar translation.
 
 ## Task 3 - Evaluation and Verification
 

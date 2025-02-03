@@ -29,7 +29,8 @@
 - upload to Hugging Face khinhlaing/myn-eng-dataset
 
 ### Preprocessing
-The dataset preprocessing involved merging multiple text files, cleaning unnecessary characters such as numbers, ratings, and symbols, and then separating English and Myanmar sentences. Afterward, the cleaned text was structured into a parallel dataset, saved as a CSV file, and split into training, validation, and test sets. Finally, the dataset was uploaded to Hugging Face for accessibility and further use. The preprocessing approach was inspired by the methods from the myXNLI project on GitHub (https://github.com/akhtet/myXNLI/tree/main).
+
+The dataset preprocessing involved merging multiple text files, cleaning unnecessary characters such as numbers, ratings, and symbols, and then separating English and Myanmar sentences. Afterward, the cleaned text was structured into a parallel dataset, saved as a CSV file, and split into training, validation, and test sets (check data_preprocessing.ipynb) Finally, the dataset was uploaded to Hugging Face for accessibility and further use. The preprocessing approach was inspired by the methods from the myXNLI project on GitHub (https://github.com/akhtet/myXNLI/tree/main).
 
 ### Tokenizing
 English(source language) - tokenized using torch get_tokenizer.

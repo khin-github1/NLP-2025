@@ -114,4 +114,6 @@ python app.py
 ### Result
 ![Tralation ](images/happy.png)
 ![Tralation ](images/image.png)
+![Tralation ](images/web1.png)
+
 

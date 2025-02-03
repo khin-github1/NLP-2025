@@ -9,7 +9,7 @@
 - [Task 3 - Evaluation and Verification](#task-3---evaluation-and-verification)
    - [Performance Plots](#performance-plots)
    - [Attention Maps](#attention-maps)
-   - [Result Discussion](#result-discussion)
+  
 - [Task 4 - Web Application](#task-4---web-application)
     - [How to run](#how-to-run)
     - [Result](#result)
@@ -50,6 +50,14 @@ Tokenization:  ['အိမ်', 'မှာ', 'အလုပ်', 'လုပ်', 
 Once tokenized, a vocabulary is built by selecting tokens that appear at least twice. The processed corpus is then transformed into tensors, with padding applied using a collation function. This prepares the data for efficient batch loading during model training.
 ## Task 2 - Experiment with Attention Mechanisms
 
+Epochs - 5
+Batch Size- 125
+Hidden dimension - 256
+Feedforward dimension - 512
+Number of encoder/decoder layers - 3
+Number of heads for multihead attention - 8
+Dropout rate - 0.1
+
 
 | Attentions       | Training Loss | Training PPL | Validation Loss | Validation PPL |
 |------------------|---------------|--------------|-----------------|----------------|
@@ -57,17 +65,16 @@ Once tokenized, a vocabulary is built by selecting tokens that appear at least t
 | Multiplicative|         3.654        |       38.622        |       4.036        |         56.573        |
 | Additive      |        3.648           |      38.379        |       4.053         |          47.583      |
 
-The performance of the additive attention mechanism is slightly better than the performance of the other two mechanisms. The reasoning and implication behind this will be explained in [Relation between Burmese and Additive Attention](#relation-between-burmese-and-additive-attention).
 
 The computational efficiency :  
 General Attention : 14m 4s  
 Multiplicative Attention : 7m 11s  
 Additive Attention : 10m 19s  
 
+Training and validation losses are nearly the same across all attention mechanisms. While General Attention performs slightly better, it is the slowest (14m 4s). Multiplicative Attention is the fastest (7m 11s) but has the highest perplexity. Additive Attention (10m 19s) offers a good balance between performance and efficiency, making it the best choice for Myanmar translation.
 
-The translation accuracy, however, is lacking for all three mechanisms. Since there is no clear benchmark available for Myanmar language, the additive attention mechanism was chosen based purely on validation loss and perplexity.
+## Task 3 - Evaluation and Verification
 
-## Loss Graph
 | General Attention Loss                                     | Multiplicative Attention Loss                                      | Additive Attention Loss                                       |
 |----------------------------------------------|----------------------------------------------|----------------------------------------------|
 | <img src="./images/general.png" width="300"/> | <img src="./images/Multi.png" width="300"/> | <img src="./images/Additive.png" width="300"/> |
@@ -78,32 +85,6 @@ The translation accuracy, however, is lacking for all three mechanisms. Since th
 |----------------------------------------------|----------------------------------------------|----------------------------------------------|
 | <img src="./images/generalmap.png" width="400"/> | <img src="./images/multimap.png" width="400"/> | <img src="./images/additivemap.png" width="400"/> | 
 
-## Relation between Burmese and Additive Attention
-The complexity of relationships between the tokens in the Burmese language as well as the cross relations between each Burmese phrase and English word is assumed to be the primary reason behind the slight performance advantage of the additive attention model over the other two models. The extra trainable hyperparameters of the additive attention mechanism allows for these complex relationships to be learned by the model.
-
-## Web application and model interface
-The web application loads the model and pass the user input as source. The greedy decode takes that user input, sets the targets as `<sos>` token and starts predicting the next word. The next word is then appended to the target list and the process repeats until the max length is reached or an `<eos>` token is predicted. The targets are then joined and displayed back to the user as translated text.
-
-
-### Result Discussion
-
-- **Validation Scores**: 
-  - The **Additive Attention** mechanism yields the lowest validation loss and perplexity, indicating better performance compared to the other mechanisms.
-  - The **Multiplicative Attention** mechanism performs slightly worse than additive, while the **General Attention** mechanism performs the poorest.
-
-- **Training Scores**:
-  - The **Additive Attention** mechanism achieves the lowest training loss, indicating efficient learning during training.
-  - The **General Attention** mechanism has a slightly higher training loss compared to the multiplicative mechanism.
-
-#### Overall Effectiveness:
-
-- The **Additive Attention** mechanism demonstrates superior performance in both training and validation metrics, making it the most effective choice for translating between the native language and English.
-- The **Multiplicative Attention** mechanism performs reasonably well but falls short compared to the additive mechanism.
-- The **General Attention** mechanism lags behind the others, suggesting it may not be as effective in capturing relevant information for translation.
-
-#### Conclusion:
-
-Based on the evaluation using validation perplexity and loss, along with consideration of training scores, the **Additive Attention** mechanism proves to be the most effective choice for translating between the native language and English.
 
 
 ## Task 4 - Web Application
@@ -124,5 +105,5 @@ python app.py
 
 ### Result
 ![Tralation ](images/happy.png)
-![Tralation ](images/eat.png)
+![Tralation ](images/image.png)
 

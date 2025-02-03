@@ -9,7 +9,6 @@
 - [Task 3 - Evaluation and Verification](#task-3---evaluation-and-verification)
    - [Performance Plots](#performance-plots)
    - [Attention Maps](#attention-maps)
-  
 - [Task 4 - Web Application](#task-4---web-application)
     - [How to run](#how-to-run)
     - [Result](#result)
@@ -90,7 +89,7 @@ Training and validation losses are nearly the same across all attention mechanis
  <img src="./images/multimap.png"> 
 
  ### Additive Attention Map 
- 
+
  <img src="./images/additivemap.png" > 
 
 

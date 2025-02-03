@@ -81,9 +81,14 @@ Training and validation losses are nearly the same across all attention mechanis
  
 
 ## Attention Map
-| General Attention Map                                     | Multiplicative Attention Map                                      | Additive Attention Map                                       |
-|----------------------------------------------|----------------------------------------------|----------------------------------------------|
-| <img src="./images/generalmap.png" width="400"/> | <img src="./images/multimap.png" width="400"/> | <img src="./images/additivemap.png" width="400"/> | 
+General Attention Map                                   
+<img src="./images/generalmap.png" > 
+
+ Multiplicative Attention Map 
+ <img src="./images/multimap.png"> 
+
+ Additive Attention Map 
+ <img src="./images/additivemap.png" > 
 
 
 

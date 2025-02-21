@@ -1,0 +1,130 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Text similarity</title>
+    <style>
+        
+        input[type="text"] {
+            width: 600px; 
+        }
+
+        button[type="submit"] {
+            margin-left: 300px; 
+        }
+    </style>
+</head>
+<body>
+    <h1>Text similarity</h1>
+    <form method="post" action="/">
+        <label for="input1">Sentence 1:</label>
+        {% if input1 %} 
+        <input type="text" id="input1" name="input1" placeholder="Enter value for input 1..." value="{{ input1 }}" required>
+        {% else %} 
+        <input type="text" id="input1" name="input1" placeholder="Enter value for input 1..." required>
+        {% endif %}
+        <br>
+        <label for="input2">Sentence 2:</label>
+        {% if input2 %} 
+        <input type="text" id="input2" name="input2" placeholder="Enter value for input 2..." value="{{ input2 }}"required>
+        {% else %} 
+        <input type="text" id="input2" name="input2" placeholder="Enter value for input 2..." required>
+        {% endif %}
+        <br>
+        <br>
+        <button type="submit">Submit</button>
+    </form>
+
+    <h3>Calculate similarity between 2 sentences</h3>
+
+    {% if similarity %} 
+    <p>Cosine similarity value & NLI: {{ similarity }}</p>
+    {% endif %}
+
+
+</body>
+</html> -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Text Similarity - NLI Prediction</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            background: white;
+            width: 50%;
+            margin: 50px auto;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+        }
+        h1 {
+            color: #333;
+        }
+        label {
+            font-weight: bold;
+        }
+        input[type="text"] {
+            width: 80%;
+            padding: 10px;
+            margin: 10px 0;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+        button {
+            background-color: #007bff;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+        .result-box {
+            margin-top: 20px;
+            padding: 15px;
+            background: #fff;
+            border-left: 5px solid #007bff;
+            display: inline-block;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Text Similarity - NLI Prediction</h1>
+        <p>Enter two sentences to compute their semantic similarity and NLI classification.</p>
+        <form method="post" action="/">
+            <label for="input1">Premise:</label><br>
+            <input type="text" id="input1" name="input1" placeholder="Enter the first sentence..." value="{{ input1 or '' }}" required>
+            <br>
+            <label for="input2">Hypothesis:</label><br>
+            <input type="text" id="input2" name="input2" placeholder="Enter the second sentence..." value="{{ input2 or '' }}" required>
+            <br><br>
+            <button type="submit">Analyze Similarity</button>
+        </form>
+
+        {% if similarity %}
+        <div class="result-box">
+            <!-- <p>Cosine Similarity Score: {{ similarity}}</p> -->
+            <p>NLI Classification: <strong>{{ nli_prediction}}</strong></p>
+        </div>
+        {% endif %}
+    </div>
+</body>
+</html>

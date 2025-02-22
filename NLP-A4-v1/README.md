@@ -6,7 +6,7 @@
 - [Task 2 - Sentence BERT](#task-2---sentence-bert)
 - [Task 3 - Evaluation and Analysis](#task-3---evaluation-and-analysis)
 - [Task 4 - Web Application](#task-4---web-application)
-    - [Web Page Result](#result)
+    - [Web Page Result](#web-page-result)
     - [Usage](#usage)
 
 ## Student Information

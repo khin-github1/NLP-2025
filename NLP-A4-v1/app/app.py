@@ -377,7 +377,7 @@ def index():
 
     # Load saved model
     saved_model1 = BERT()
-    saved_model1.load_state_dict(torch.load('models/trained-model1.pt'))
+    saved_model1.load_state_dict(torch.load('models/our-model.pt'))
 
     if request.method == 'POST':
         # Clear the cache

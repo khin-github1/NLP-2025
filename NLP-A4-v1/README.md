@@ -84,7 +84,8 @@ S-BERT (Pre-trained): A pre-trained S-BERT model for comparison.
 - The precision of 0.1018 suggests that the model struggles to correctly classify entailment, contradiction, and neutral relations.
 
 ### Proposed Improvements
-        To improve the efficiency and performance of the BERT-Siamese model, several optimizations were 
+
+   To improve the efficiency and performance of the BERT-Siamese model, several optimizations were 
 implemented. Training with mixed precision (FP16) on a GPU significantly reduced both memory usage and training time. Tokenization and padding strategies were adjusted to better align with the model’s input requirements, ensuring consistency across batches. To enhance generalization, the model was trained on a larger and more diverse dataset. Additionally, reducing the hidden size helped optimize computational efficiency without compromising performance. Finally, different BERT variants, including RoBERTa and ALBERT, were tested to explore potential improvements. These adjustments collectively aimed to refine the model’s accuracy and efficiency.
 
 ## Task 4 - Web Application

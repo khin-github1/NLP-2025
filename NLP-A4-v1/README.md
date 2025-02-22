@@ -1,26 +1,18 @@
 #  A4: Do you AGREE?
 
 - [Student Information](#student-information)
-- [Installation and Setup](#installation-steps)
 - [Task 1 - Training BERT from Scratch](#task-1---training-bert-from-scratch)
 - [Task 2 - Sentence BERT](#task-2---sentence-bert)
 - [Task 3 - Evaluation and Analysis](#task-3---evaluation-and-analysis)
 - [Task 4 - Web Application](#task-4---web-application)
     - [Web Page Result](#web-page-result)
     - [Usage](#usage)
+- [Installation and Setup](#installation-steps)
 
 ## Student Information
  - Name: Khin Yadanar Hlaing
  - ID: st124959
 
-## Installation Steps
-To run app, 
-1. Load the files from this repository
-2. Run
-```sh
-python app.py
-```
-3. Access the app with http://127.0.0.1:5000 
 
 ## Task 1 - Training BERT from Scratch
 ### Introduction
@@ -97,3 +89,12 @@ implemented. Training with mixed precision (FP16) on a GPU significantly reduced
 ### Usage:
 - Input: There are two input fields where you can enter two sentences to compare.
 - Output: after you click the 'Analyze Similarity' button, the NLI Classification can be seen.
+
+## Installation Steps
+To run app, 
+1. Load the files from this repository
+2. Run
+```sh
+python app.py
+```
+3. Access the app with http://127.0.0.1:5000 

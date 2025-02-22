@@ -17,7 +17,7 @@
 ## Task 1 - Training BERT from Scratch
 ### Introduction
 This report evaluates the implementation of a Siamese-BERT (S-BERT) model for Natural Language 
-Inference (NLI) classification using the MNLI dataset. The primary objective wasto compare the performance of an S-BERT model trained on a custom BERT variant against a pre-trained S-BERT model.
+Inference (NLI) classification using the MNLI dataset. 
 
 
 - Dataset: [BookCorpus](https://huggingface.co/datasets/bookcorpus/bookcorpus) 

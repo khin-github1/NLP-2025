@@ -24,7 +24,7 @@ python app.py
 
 ## Task 1 - Training BERT from Scratch
 
-- Dataset: I used [BookCorpus](https://huggingface.co/datasets/bookcorpus/bookcorpus) 
+- Dataset: [BookCorpus](https://huggingface.co/datasets/bookcorpus/bookcorpus) 
 - The hyperparameters chosen for training our BERT model was:  
     - Number of Encoder of Encoder Layer - 6  
     - Number of heads in Multi-Head Attention - 8  
@@ -37,7 +37,7 @@ python app.py
 
 
 ## Task 2 - Sentence BERT
-- Dataset: I used [MNLI](https://huggingface.co/datasets/glue/viewer/mnli)
+- Dataset: [MNLI](https://huggingface.co/datasets/glue/viewer/mnli)
 - The hyperparameters chosen for tuning S-BERT on pretrained  BERT model was:
     - Training data - 10000 rows  
     - Number of epochs - 2 
@@ -51,9 +51,9 @@ python app.py
 ## Task 3 - Evaluation and Analysis
 
 | Model Type | trainable parameter | Average Cosine Similarity | Average Loss | Cosine Similarity with one specific pair sentence  | Accuracy| Precision | Recall,F1-score | Training Time (train with MNLI dataset)
-|:------------------------|:----------:|:----------:|:----------:|:----------:|:----------:|:----------:|:----------:|:----------:|
-| S-BERT on our BERT model |    83,137,171   |    0.9986     |  8.9522 | 0.9996 |  0.3190| 0.1018 | 0.3190,0.1543|  564m 2s(on CPU)|
-| S-BERT(Pre) |   109,482,240    |    0.7733 |  1.0790 | 0.8057 | 0.3410 | - | - | 139m 54s(num-epoch=2)|  
+|:--------------------------------|:----------:|:----------:|:----------:|:----------:|:----------:|:----------:|:----------:|:---------------------:|
+| S-BERT on our BERT model        |    83,137,171   |    0.9986     |  8.9522 | 0.9996 |  0.3190| 0.1018 | 0.3190,0.1543|  564m 2s(on CPU)    |
+| S-BERT(Pre)           |   109,482,240    |    0.7733 |  1.0790 | 0.8057 | 0.3410 | - | - | 139m 54s(num-epoch=2)       |  
 
 
 ## Task 4 - Web Application

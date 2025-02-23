@@ -83,7 +83,7 @@ implemented. Training with mixed precision (FP16) on a GPU significantly reduced
 ## Task 4 - Web Application
 
 ### Web Page Result
-![Contradiction](images/image.png)
+
 ![Entailment](images/entailment.png)
 
 ### Usage:

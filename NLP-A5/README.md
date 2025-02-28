@@ -68,11 +68,9 @@ This allows easy access for inference and further fine-tuning.
 #### Screenshots:
 - **Result**  
   ![Home](images/2.png)  
+  
 - **Video**  
-<video width="100" height="100" controls>
-  <source src="video/DPO_Ass.mp4" type="video/mp4">
-  Your browser does not support the video tag.
-</video>
+[Watch Video](video/DPO_Ass.mp4)
 
 ---
 

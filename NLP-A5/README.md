@@ -70,9 +70,13 @@ This allows easy access for inference and further fine-tuning.
   ![Home](images/2.png)  
 
 - **Video**  
-[Result GIF](images/resultgif.gif)
+![Demo GIF](images/resultgif.gif)
 
----
+
+
+
+
+
 
 ## How to Run the Project
 

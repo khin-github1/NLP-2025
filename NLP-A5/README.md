@@ -68,9 +68,9 @@ This allows easy access for inference and further fine-tuning.
 #### Screenshots:
 - **Result**  
   ![Home](images/2.png)  
-  
+
 - **Video**  
-[Watch Video](video/DPO_Ass.mp4)
+[Result GIF](images/resultgif.gif)
 
 ---
 

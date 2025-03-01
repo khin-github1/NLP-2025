@@ -5,7 +5,7 @@ import torch
 app = Flask(__name__)
 
 # Load the trained model and tokenizer
-model_path = r"D:\AIT_lecture\NLP\code\NLP-A5\dpo_lr5e-05_bs4_ep3_beta0.1\checkpoint-4"  # Make sure the model is saved in this path
+model_path = "khinhlaing/dop_qwan"  # Make sure the model is saved in this path
 model = AutoModelForCausalLM.from_pretrained(model_path)
 tokenizer = AutoTokenizer.from_pretrained(model_path)
 

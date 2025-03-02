@@ -50,6 +50,8 @@ The publicly available [Dahoas/static-hh](https://huggingface.co/datasets/Dahoas
 2. **Configuration Setup** - Define `DPOConfig` with training parameters.
 3. **Fine-Tuning** - Compute **DPO loss**, update model weights, and log progress.
 4. **Hyperparameter Tuning** *(optional)* - Test variations of learning rate, batch size, epochs, and beta.
+
+
 **Experiment Results**: {'learning_rate': 5e-05, 'batch_size': 4, 'epochs': 3, 'beta': 0.1, 'loss': 1.6342010498046875}
 ---
 

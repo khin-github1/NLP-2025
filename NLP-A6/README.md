@@ -19,9 +19,8 @@ The implementation is divided into three key tasks:
 
 ### Data Sources
 - **Documents:**
-  - `CV_Khin_Yadanar_Hlaing.pdf` (Resume)
-- **Web Links:**
-  - `https://www.linkedin.com/in/kyhlaing/` (LinkedIn Profile)
+  - `CV_Khin_Yadanar_Hlaing.pdf` and `linkedinprofile.pdf`(Resume)
+
 
 ### Key Steps:
 - **Load and Process Documents:** Using `PyMuPDFLoader` to extract text.

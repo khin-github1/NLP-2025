@@ -82,19 +82,7 @@ python app.py
 
 ---
 
-## Folder Structure
-```
-A6-TalkWithYourself/
-│── app/               # Flask web application
-│   ├── app.py         # Backend server
-│   ├── templates/
-│   │   ├── index.html # Frontend chat UI
-│── data/              # Documents & embeddings
-│   ├── faiss_index/   # Stored FAISS index for quick retrieval
-│   ├── CV_Khin_Yadanar_Hlaing.pdf  # Resume
-│── chatbot_responses.json  # Stored chatbot Q&A responses
-│── README.md
-```
+
 
 ---
 

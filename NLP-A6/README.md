@@ -38,7 +38,7 @@ The implementation is divided into three key tasks:
 | Component    | Model |
 |-------------|---------------------------------|
 | **Retriever** | FAISS (`all-MiniLM-L6-v2`) |
-| **Generator** | Groq LLaMA-3.1-8B |
+| **Generator** | Groq LLaMA-3.1-8B (`https://python.langchain.com/docs/integrations/chat/groq/`) |
 
 ### Identified Issues & Solutions:
 1. **Web Scraping Limitations:** LinkedIn blocks direct scraping, so an alternative (manual download) was implemented.
@@ -81,10 +81,6 @@ python app.py
 
 ---
 
-
-
----
-
 ## **Example Questions Chatbot Can Answer**
 1. How old are you?
 2. What is your highest level of education?
@@ -97,11 +93,4 @@ python app.py
 9. As a master’s student, what is the most challenging aspect of your studies so far?
 10. What specific research interests or academic goals do you hope to achieve during your time as a master’s student?
 
----
 
-## Future Improvements
-- **API Integration:** Implement real-time LinkedIn API for dynamic data retrieval.
-- **Fine-Tuning:** Train a more personalized model using user-specific datasets.
-- **Deployment:** Deploy chatbot as a web service using **Docker & Cloud Services**.
-
-**This project demonstrates how RAG can enhance personal Q&A capabilities!**

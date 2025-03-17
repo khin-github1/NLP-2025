@@ -59,7 +59,7 @@ A **Flask-based web application** was built to enable interaction with the chatb
 
 ### Screenshots:
 - **Chatbot Interface**  
-  ![Chatbot](images/2.png)
+  ![Chatbot](images/image.png)
 
 ---
 

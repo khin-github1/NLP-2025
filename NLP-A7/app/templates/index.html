@@ -1,0 +1,93 @@
+<!-- templates/index.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Toxic Comment Classifier</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    body {
+      background: #f5f7fa;
+      font-family: 'Inter', sans-serif;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      height: 100vh;
+      margin: 0;
+    }
+    .card {
+      background: #fff;
+      padding: 2rem 2.5rem;
+      border-radius: 12px;
+      box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
+      width: 480px;
+    }
+    h1 {
+      text-align: center;
+      margin-bottom: 1.5rem;
+      color: #333;
+    }
+    textarea {
+      width: 100%;
+      padding: 12px;
+      font-size: 16px;
+      border-radius: 8px;
+      border: 1px solid #ccc;
+      resize: none;
+    }
+    button {
+      margin-top: 1rem;
+      width: 100%;
+      background: #4f46e5;
+      color: white;
+      font-size: 16px;
+      padding: 12px;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+    }
+    .result {
+      margin-top: 1.5rem;
+      padding: 1rem;
+      font-size: 18px;
+      font-weight: bold;
+      text-align: center;
+      border-radius: 8px;
+    }
+    .Toxic {
+      background: #fee2e2;
+      color: #b91c1c;
+    }
+    .Non-Toxic {
+      background: #dcfce7;
+      color: #166534;
+    }
+    footer {
+      margin-top: 20px;
+      font-size: 14px;
+      color: #888;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <h1>Toxic Comment Classifier</h1>
+    <form method="POST">
+      <textarea name="text" rows="5" placeholder="Type your comment here...">{{ text_input }}</textarea>
+      <button type="submit">Classify</button>
+    </form>
+
+    {% if result %}
+      <div class="result {{ result }}">
+        Result: {{ result }}
+      </div>
+    {% endif %}
+  </div>
+  <footer>
+    Created by Khin Yadanar Hlaing<br>
+    ID - st124959
+  </footer>
+</body>
+</html>
